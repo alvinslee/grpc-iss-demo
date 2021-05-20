@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+service SpaceStation {
+  rpc getAstronautCount (CountRequest) returns (CountResponse) {}
+  rpc getAstronautNames (stream AstronautIndex) returns (NamesResponse) {}
+  rpc getLocation (LocationRequest) returns (stream LocationResponse) {}
+}
+
+message CountRequest {
+}
+
+message CountResponse {
+  int32 count = 1;
+}
+
+message AstronautIndex {
+  int32 index = 1;
+}
+
+message NamesResponse {
+  string names = 1;
+}
+
+message LocationRequest {
+  int32 seconds = 1;
+}
+
+message LocationResponse {
+  string datetime = 1;
+  float latitude = 2;
+  float longitude = 3;
+}

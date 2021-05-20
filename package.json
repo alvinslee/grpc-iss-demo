@@ -1,0 +1,17 @@
+{
+  "name": "grpc-server-demo",
+  "version": "1.0.0",
+  "description": "gRPC Node.js server demo - real-time ISS information",
+  "main": "server.js",
+  "repository": "git@github.com:alvinslee/grpc-iss-demo.git",
+  "author": "Alvin Lee <alvin@ootbdev.com>",
+  "license": "MIT",
+	"scripts": {
+		"start": "node server.js"
+	},
+  "dependencies": {
+    "@grpc/proto-loader": "^0.6.2",
+    "axios": "^0.21.1",
+    "grpc": "^1.24.10"
+  }
+}
